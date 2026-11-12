@@ -3,66 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'unsafe-inline';">
   <title>Support — 3D Color Fan. RAL NCS PPG BEHR</title>
   <style>
-    :root {
-      --bg: #f5f5f7;
-      --card: #ffffff;
-      --text: #1d1d1f;
-      --muted: #6e6e73;
-      --accent: #0071e3;
-      --accent-hover: #0077ed;
-      --border: #d2d2d7;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 720px;
-      margin: 20px auto;
-      background: var(--card);
-      padding: 32px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    }
+    :root { --bg: #f5f5f7; --card: #ffffff; --text: #1d1d1f; --muted: #6e6e73; --accent: #0071e3; --accent-hover: #0077ed; --border: #d2d2d7; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 20px; }
+    .container { max-width: 720px; margin: 20px auto; background: var(--card); padding: 32px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
     h1 { font-size: 26px; margin-top: 0; }
     h2 { font-size: 19px; margin-top: 28px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
-    p, li { font-size: 15px; color: #333; }
+    p { font-size: 15px; color: #333; }
     .meta { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
-    .contact-box {
-      background: #f0f7ff;
-      border: 1px solid #cce3ff;
-      padding: 20px;
-      border-radius: 12px;
-      margin: 24px 0;
-    }
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-size: 15px;
-      padding: 11px 20px;
-      border-radius: 8px;
-      font-weight: 500;
-      margin-top: 8px;
-      transition: background 0.2s;
-    }
+    .contact-box { background: #f0f7ff; border: 1px solid #cce3ff; padding: 20px; border-radius: 12px; margin: 24px 0; }
+    .btn { display: inline-block; background: var(--accent); color: #fff; border: none; cursor: pointer; font-size: 15px; padding: 11px 20px; border-radius: 8px; font-weight: 500; margin-top: 8px; }
     .btn:hover { background: var(--accent-hover); }
     .note { font-size: 13px; color: var(--muted); margin-top: 10px; margin-bottom: 0; }
+    .status { font-size: 13px; color: #1e7e34; font-weight: 500; margin-top: 8px; display: none; }
     .faq-item { margin-bottom: 16px; }
     .faq-q { font-weight: 600; margin-bottom: 4px; }
     footer { margin-top: 32px; font-size: 13px; color: var(--muted); text-align: center; }
     footer a { color: var(--muted); }
   </style>
 </head>
-<body>
+<body data-app="3D Color Fan">
 
 <div class="container">
   <h1>3D Color Fan. RAL NCS PPG BEHR</h1>
@@ -76,6 +38,7 @@
     <strong>Need help or found a bug?</strong>
     <p style="margin: 8px 0;">Click the button below to launch your default mail app. Please include your device model and iOS version so we can assist you faster.</p>
     <button id="contact-btn" type="button" class="btn">Contact Support</button>
+    <div id="copy-status" class="status"></div>
     <p class="note">Your email client will open automatically with our support address pre-filled.</p>
   </div>
 
@@ -104,8 +67,8 @@
   <footer>
     <p>© IE Zinkevich. All rights reserved.</p>
     <p>
-      <a href="https://apple.com" target="_blank">View on App Store</a> · 
-      <a href="https://apple.com" target="_blank">Terms of Use (EULA)</a>
+      <a href="https://apple.com" target="_blank" rel="noopener noreferrer">View on App Store</a> · 
+      <a href="https://apple.com" target="_blank" rel="noopener noreferrer">Terms of Use (EULA)</a>
     </p>
   </footer>
 </div>
