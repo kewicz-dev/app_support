@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — 3D Color Fan. RAL NCS PPG BEHR</title>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --accent: #0071e3;
+      --border: #d2d2d7;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 720px;
+      margin: 20px auto;
+      background: var(--card);
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    h1 { font-size: 26px; margin-top: 0; }
+    h2 { font-size: 19px; margin-top: 28px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    p, li { font-size: 15px; color: #333; }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+    .contact-box {
+      background: #f0f7ff;
+      border: 1px solid #cce3ff;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 24px 0;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+    .faq-item { margin-bottom: 16px; }
+    .faq-q { font-weight: 600; margin-bottom: 4px; }
+    footer { margin-top: 32px; font-size: 13px; color: var(--muted); text-align: center; }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>3D Color Fan. RAL NCS PPG BEHR</h1>
+  <div class="meta">Official App Support · Developer: Ivan Zinkevich</div>
+
+  <p>
+    Thank you for using <strong>3D Color Fan</strong> — an interactive e-catalog of international color palettes (RAL, NCS, Caparol, PPG, Sherwin Williams, BEHR, Benjamin Moore, and more) with AR wall painting and RGB/CMYK/HEX conversion.
+  </p>
+
+  <div class="contact-box">
+    <strong>Need help or found a bug?</strong>
+    <p style="margin: 8px 0;">Contact our support team directly via email. Please include your device model and iOS version so we can assist you faster.</p>
+    <a id="email-btn" class="btn" href="#">Contact Support</a>
+    <p style="margin: 10px 0 0; font-size: 14px;">Email: <a id="email-link" href="#"></a></p>
+  </div>
+
+  <h2>Frequently Asked Questions (FAQ)</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">1. Why doesn't the AR camera wall-painting feature work on my device?</div>
+    <p>Real-time surface painting requires an Apple device equipped with a <strong>LiDAR Scanner</strong> (iPhone 12 Pro / 13 Pro / 14 Pro / 15 Pro / 16 Pro models or iPad Pro 2020 and newer). On devices without LiDAR, you can still use all color catalogs, converters, and full-screen color previews.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">2. How do I restore my purchased color palettes?</div>
+    <p>Open the app, go to the <strong>Settings</strong> or palette store screen, and tap <strong>Restore Purchases</strong>. Make sure you are signed in with the same Apple ID used for the original purchase.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">3. Which color systems are included?</div>
+    <p>The catalog includes RAL Classic, RAL Design, NCS, Benjamin Moore, Sherwin Williams, BEHR PRO, PPG Voice of Color, Caparol 3D System Plus, Valspar, Dunn Edwards, Hallman Lindsay, DIC, and Matthews Paint.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">4. System Requirements</div>
+    <p>Requires iOS 16.0 or later, iPadOS 16.0 or later, macOS 13.0 or later (Apple M1 chip or newer), or visionOS 1.0 or later.</p>
+  </div>
+
+  <footer>
+    <p>© IE Zinkevich. All rights reserved.</p>
+    <p>
+      <a href="https://apps.apple.com/us/app/3d-color-fan-ral-ncs-ppg-behr/id1616149364" target="_blank">View on App Store</a> · 
+      <a href="https://apple.com" target="_blank">Terms of Use (EULA)</a>
+    </p>
+  </footer>
+</div>
+
+<script>
+  // === УКАЖИТЕ ВАШ EMAIL ОДИН РАЗ НИЖЕ ===
+  const SUPPORT_EMAIL = "s.zinkewicz@gmail.com";
+  const APP_NAME = "3D Color Fan. AR wall painter";
+
+  const emailLink = document.getElementById("email-link");
+  const emailBtn = document.getElementById("email-btn");
+  const mailtoHref = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(APP_NAME + " — Support Request")}`;
+
+  emailLink.textContent = SUPPORT_EMAIL;
+  emailLink.href = mailtoHref;
+  emailBtn.href = mailtoHref;
+</script>
+
+</body>
+</html>
