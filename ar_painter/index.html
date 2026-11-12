@@ -110,25 +110,6 @@
   </footer>
 </div>
 
-<script>
-  (function() {
-    // === НАСТРОЙКА ПОЧТЫ (РАЗДЕЛЕНА ДЛЯ ЗАЩИТЫ ОТ СПАМ-БОТОВ) ===
-    const EMAIL_USER = "s.zinkewicz";        // Имя ящика до @
-    const EMAIL_DOMAIN = "gmail.com";  // Домен после @
-    const APP_NAME = "3D Color Fan. AR wall painter";
-
-    const btn = document.getElementById("contact-btn");
-
-    btn.addEventListener("click", function() {
-      // Собираем адрес только в момент клика пользователя
-      const atSymbol = String.fromCharCode(64);
-      const target = EMAIL_USER + atSymbol + EMAIL_DOMAIN;
-      const subject = encodeURIComponent(APP_NAME + " — Support Request");
-      
-      window.location.href = "mailto:" + target + "?subject=" + subject;
-    });
-  })();
-</script>
-
+<script src="../assets/app.js"></script>
 </body>
 </html>
